@@ -1,0 +1,7 @@
+1. In index.js, we are passing the component to be 'rendered'.
+2. This can be a class component or a function component.
+3. Function component as the name suggests, is a function that
+return HTML (specifically JSX).
+4. Class components extends Component class react library
+and the render method returns the same JSX.
+See AppClassComponent.js.
