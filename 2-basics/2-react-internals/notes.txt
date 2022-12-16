@@ -1,0 +1,8 @@
+1. index.js is a script included in public/index.html
+2. React library is like an engine,
+ReactDom library is used to direct that engine towards web/dom
+3. StrictMode doesn't allow deprecated code to run
+4. Generally we want to enclose only our App component in call
+to React.render, it will be rendered inside HTML element with id=root
+from index.html.
+5. Basically react-app lives inside div#root.

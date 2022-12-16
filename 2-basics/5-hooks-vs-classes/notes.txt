@@ -1,0 +1,1 @@
+Hooks are react specific and make code more complex.

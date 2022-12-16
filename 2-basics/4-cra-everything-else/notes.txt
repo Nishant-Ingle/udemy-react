@@ -1,0 +1,1 @@
+1. React Component: Self contained piece of code that returns UI representation of HTML.

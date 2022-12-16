@@ -1,0 +1,14 @@
+1. State stores all the data.
+2. Components are combined to create a web page.
+3. React components create a virtual DOM
+(js objects) tree.
+4. Changes only trickle down in react
+aks 1-way data flow e.g. root to leaf.
+5. Components can be function or class
+that take props and return HTML embedded with JS.
+
+6. Job of a React developer
+
+  a. Decide on Components
+  b. Decide the state & where it lives
+  c. What changes when state changes

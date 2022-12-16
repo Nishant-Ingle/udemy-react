@@ -1,0 +1,19 @@
+1. List npm packages
+
+npm list -g cowsay
+npm list cowsay
+
+2. Remove packages
+
+npm uninstall cowsay
+
+3. Execute a package and clean
+
+npx cowsay 'arg'
+
+Downloads, executes and deletes.
+
+4. Create react app
+
+package to create react app
+

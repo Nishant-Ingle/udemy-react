@@ -1,0 +1,15 @@
+react-scripts
+
+1. start: start on localhost:<port>
+2. build: create deployable dir
+3. test
+4. eject:
+  babel: react -> browser understandable basic version of js
+  webpack:  breaks js file into chunks(modules) for optimization
+  so that js chunk is sent only when user needs it or access the
+  link refering to it.
+
+eject the code created by babel + webpack to customize (rarely needed)
+
+5. public/manifest.json is for pwa
+6. robots.txt: for webcrawlers

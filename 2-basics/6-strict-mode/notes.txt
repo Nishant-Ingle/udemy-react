@@ -1,0 +1,2 @@
+console.log was suppressed in strict mode of r17
+but is re-enabled in r18.
