@@ -1,0 +1,10 @@
+1. Component is not re-rendered is the original object doesn't change.
+e.g. if a field from the object changes then don't re-render
+even if variable points to a new object (using something like Object.assign).
+
+2. Use setState method to update the fields in local state.
+Point to note: variable name is state, if it was state2 then there won't
+be any setState2.
+
+3. Re-rendering happens when react sees that state object is a different
+object in memory.

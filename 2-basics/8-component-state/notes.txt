@@ -1,0 +1,9 @@
+1. Component has a local state i.e. variables/constants inside the class.
+
+2. If a variable's value changes and it is getting used in JSX, then the
+HTML is re-rendered.
+
+3. Comments in react, or at least root.render method.
+{/* */}
+
+4. We can include App and AppClassComponent both in root.render.
