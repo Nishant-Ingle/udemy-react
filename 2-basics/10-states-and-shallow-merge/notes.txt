@@ -1,0 +1,2 @@
+1. setState uses shallow merge i.e. value of a key is replaced
+as it is so if type is different results might be unexpected.

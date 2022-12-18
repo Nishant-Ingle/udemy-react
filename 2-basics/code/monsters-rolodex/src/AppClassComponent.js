@@ -31,7 +31,11 @@ class AppClassComponent extends Component {
               // };
 
               // Re-render -> Yes
-              this.setState({ name: 'Final new value !' });
+              // this.setState({ name: 'Final new value !' });
+
+              // Oops !
+              this.setState({ name: { first: 'Nishant', last: 'Ingle' } });
+
               console.log(this.state.name);
             }}
           >
