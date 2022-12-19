@@ -6,36 +6,28 @@ class AppClassComponent extends Component {
   constructor() {
     super();
     this.state = {
-      'name': 'Nishant',
+      monsters: [
+        {
+          'name': 'Abc',
+        },
+        {
+          'name': 'Def',
+        },
+        {
+          'name': 'Ghi',
+        }]
     };
-    this.dummy = {};
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          Hi {this.state.name} !
-          <button
-            onClick={() => {
-              this.setState(() => {});
-              this.setState(
-                () => {
-                  return { name: 'Mr.Ingle'}
-                },
-                () => {
-                  console.log(this.state.name);
-                }
-              );
-            }}
-          >
-            Change name
-          </button>
-        </header>
+          {
+            this.state.monsters.map((person) => {
+              return <h1> { person.name } </h1>;
+            })
+          }
+          
       </div>
     );
   }

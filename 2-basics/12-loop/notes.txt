@@ -1,0 +1,2 @@
+1. Use the map method of a list to return JSX.
+2. Remember not to do this.state.key1 = but this.state = .
