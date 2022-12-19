@@ -1,0 +1,9 @@
+1. Call to setState is asynchronous so the line just below it
+is likely to run before (e.g. console.log).
+2. Reason for this is that react tries to batch setState calls
+for optimization.
+3. We can also have synchronous behavior of setState by passing
+a function and an optional callback.
+4. The parameters of this function are state, props. both optional.
+5. We might want to include state if we are going to operate on
+existing values from it.

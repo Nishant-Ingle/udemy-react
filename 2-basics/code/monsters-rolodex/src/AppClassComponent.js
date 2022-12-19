@@ -22,21 +22,15 @@ class AppClassComponent extends Component {
           Hi {this.state.name} !
           <button
             onClick={() => {
-              // Re-render X
-              // this.state.name = 'New Value';
-
-              // Re-render X
-              // this.state = {
-              //   name: 'Real new value',
-              // };
-
-              // Re-render -> Yes
-              // this.setState({ name: 'Final new value !' });
-
-              // Oops !
-              this.setState({ name: { first: 'Nishant', last: 'Ingle' } });
-
-              console.log(this.state.name);
+              this.setState(() => {});
+              this.setState(
+                () => {
+                  return { name: 'Mr.Ingle'}
+                },
+                () => {
+                  console.log(this.state.name);
+                }
+              );
             }}
           >
             Change name
