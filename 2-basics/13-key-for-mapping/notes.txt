@@ -1,0 +1,9 @@
+1. In a loop, react needs 'key' attribute in topmost
+html tag for optimization of updating & re-rendering components.
+
+e.g. if one h1 changes only that is re-rendered and not all h1s, it is 
+found using key attribute by react.
+
+2. 'key' is not shown in final html though react tracks it.
+
+3. Adding key removes the warning from console.
