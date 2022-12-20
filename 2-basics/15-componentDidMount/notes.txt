@@ -1,0 +1,5 @@
+1. componentDidMount: This lifecycle method will be called just after a component is mounted.
+Mounting is the process of placing the component on the DOM. Use-case: Call backend API.
+Similar to (ng)onInit lifecycle hook of Angular.
+
+2. fetch a js method calls a URL and return the response wrapped in a promise.

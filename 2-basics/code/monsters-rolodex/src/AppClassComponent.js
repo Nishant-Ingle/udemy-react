@@ -22,6 +22,22 @@ class AppClassComponent extends Component {
     };
   }
 
+  componentDidMount() {
+    const url = "https://jsonplaceholder.typicode.com/users";
+    fetch(url)
+    .then(resp => {
+      return resp.json();
+    })
+    .then(users => {
+      this.setState(() => {
+        return { monsters: users };
+      },
+      () => {
+        console.log(this.state);
+      })
+    });
+  }
+
   render() {
     return (
       <div className="App">
