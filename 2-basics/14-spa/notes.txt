@@ -1,0 +1,2 @@
+spa: creation/deletion of components is made on client for majority of cases
+without asking the server for new page
