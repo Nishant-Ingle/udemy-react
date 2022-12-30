@@ -4,7 +4,7 @@ import { Component } from 'react';
 
 class AppClassComponent extends Component {
   constructor() {
-    console.log('1');
+    console.log('constructor');
     super();
     this.state = {
       monsters: [
@@ -24,7 +24,7 @@ class AppClassComponent extends Component {
   }
 
   componentDidMount() {
-    console.log('3');
+    console.log('componentDidMount');
     const url = "https://jsonplaceholder.typicode.com/users";
     fetch(url)
     .then(resp => {
@@ -41,9 +41,17 @@ class AppClassComponent extends Component {
   }
 
   render() {
-    console.log('2');
+    console.log('render');
     return (
       <div className="App">
+          <input
+            className='search-box'
+            type='search'
+            placeholder='search monsters'
+            onChange={ (event) => {
+              console.log(event.target.value);
+            }}
+          />
           {
             this.state.monsters.map((person) => {
               return <div key={ person.id }>
