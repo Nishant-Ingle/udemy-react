@@ -3,6 +3,8 @@ import './App.css';
 import { Component } from 'react';
 
 class AppClassComponent extends Component {
+  originalState = null;
+
   constructor() {
     console.log('constructor');
     super();
@@ -32,9 +34,10 @@ class AppClassComponent extends Component {
     })
     .then(users => {
       this.setState(() => {
-        return { monsters: users };
+        return this.originalState = { monsters: users };
       },
       () => {
+        console.log("state: ");
         console.log(this.state);
       })
     });
@@ -50,6 +53,14 @@ class AppClassComponent extends Component {
             placeholder='search monsters'
             onChange={ (event) => {
               console.log(event.target.value);
+              let updatedMonsters = this.originalState.monsters.filter(
+                (monster) => monster.name
+                                    .toLowerCase()
+                                    .includes(event.target
+                                                   .value
+                                                   .toLowerCase()));
+
+              this.setState(() => ({ monsters: updatedMonsters }));
             }}
           />
           {

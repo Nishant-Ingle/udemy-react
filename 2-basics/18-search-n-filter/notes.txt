@@ -1,0 +1,2 @@
+1. An event (here synthetic base event) is fired when the input changes.
+We are interested in the event.target.value.

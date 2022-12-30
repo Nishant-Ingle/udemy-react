@@ -1,0 +1,9 @@
+1. The code returned from render method is not html.
+Each tag represents a component in JSX.
+e.g. div represent div component having logical mapping to html div.
+
+2. That's why we use className instead of class keyword in this html like jsx as all
+js rules apply here & class is a protected keyword.
+
+3. Like onClick, we can have onChange property on jsx components that take an event
+as parameter of a fat arrow function.
