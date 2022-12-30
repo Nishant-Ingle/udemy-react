@@ -4,6 +4,7 @@ import { Component } from 'react';
 
 class AppClassComponent extends Component {
   constructor() {
+    console.log('1');
     super();
     this.state = {
       monsters: [
@@ -23,6 +24,7 @@ class AppClassComponent extends Component {
   }
 
   componentDidMount() {
+    console.log('3');
     const url = "https://jsonplaceholder.typicode.com/users";
     fetch(url)
     .then(resp => {
@@ -39,6 +41,7 @@ class AppClassComponent extends Component {
   }
 
   render() {
+    console.log('2');
     return (
       <div className="App">
           {

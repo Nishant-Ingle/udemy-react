@@ -1,0 +1,6 @@
+1. First method to run in a class: constructor.
+  We should init the state in constructor.
+  After that render runs which mounts the component.
+  Next componentDidMount runs.
+
+2. Each time state is updated, render is called.
