@@ -1,0 +1,2 @@
+1. In the onChange callback, update the state.searchField value as event.target.value.
+2. In render, create a filtered monster list and display the same.

@@ -3,26 +3,10 @@ import './App.css';
 import { Component } from 'react';
 
 class AppClassComponent extends Component {
-  originalState = null;
-
   constructor() {
     console.log('constructor');
     super();
-    this.state = {
-      monsters: [
-        {
-          id: '1',
-          name: 'Abc',
-        },
-        {
-          id: '2',
-          name: 'Def',
-        },
-        {
-          id: '3',
-          name: 'Ghi',
-        }]
-    };
+    this.state = { monsters: [], searchField: ''};
   }
 
   componentDidMount() {
@@ -34,7 +18,7 @@ class AppClassComponent extends Component {
     })
     .then(users => {
       this.setState(() => {
-        return this.originalState = { monsters: users };
+        return { monsters: users, searchField: '' };
       },
       () => {
         console.log("state: ");
@@ -44,6 +28,11 @@ class AppClassComponent extends Component {
   }
 
   render() {
+    const filteredMonsters = this.state.monsters.filter(
+      (monster) => monster.name
+                          .toLowerCase()
+                          .includes(this.state.searchField));
+
     console.log('render');
     return (
       <div className="App">
@@ -52,19 +41,12 @@ class AppClassComponent extends Component {
             type='search'
             placeholder='search monsters'
             onChange={ (event) => {
-              console.log(event.target.value);
-              let updatedMonsters = this.originalState.monsters.filter(
-                (monster) => monster.name
-                                    .toLowerCase()
-                                    .includes(event.target
-                                                   .value
-                                                   .toLowerCase()));
-
-              this.setState(() => ({ monsters: updatedMonsters }));
+              console.log('before render');
+              this.setState(() => ({ searchField: event.target.value.toLowerCase() }));
             }}
           />
           {
-            this.state.monsters.map((person) => {
+            filteredMonsters.map((person) => {
               return <div key={ person.id }>
                 <h1> { person.name } </h1>
               </div>;
