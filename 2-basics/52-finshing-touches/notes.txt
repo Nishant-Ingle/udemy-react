@@ -1,0 +1,2 @@
+1. Add google font
+2. Move card to card component
