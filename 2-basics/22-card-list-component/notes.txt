@@ -1,0 +1,11 @@
+1. Create a file named components/card-list/card-list.component.jsx.
+This can be card-list.jsx or index.jsx as per our penchant.
+
+2. Every custom component should have its name in Pascal case.
+
+3. Create a component CardList extending Component, add a render method
+and export it as default (?).
+
+4. Import this in AppClassComponent without {} (?).
+
+5. When returning from a component make sure to return only 1 html component.
