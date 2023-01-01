@@ -1,0 +1,4 @@
+1. Create a method and assign to variable onSearchChange out of the fat arrow function
+from onChange method for optimization.
+
+2. Extract monsters, searchField and onSearchChange using destructuring.

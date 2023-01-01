@@ -27,11 +27,20 @@ class AppClassComponent extends Component {
     });
   }
 
+  onSearchChange = (event) => {
+    console.log('before render');
+    this.setState(() => ({ searchField: event.target.value.toLowerCase() }));
+  };
+
+
   render() {
-    const filteredMonsters = this.state.monsters.filter(
+    const { monsters, searchField } = this.state;
+    const { onSearchChange } = this;
+
+    const filteredMonsters = monsters.filter(
       (monster) => monster.name
                           .toLowerCase()
-                          .includes(this.state.searchField));
+                          .includes(searchField));
 
     console.log('render');
     return (
@@ -40,10 +49,7 @@ class AppClassComponent extends Component {
             className='search-box'
             type='search'
             placeholder='search monsters'
-            onChange={ (event) => {
-              console.log('before render');
-              this.setState(() => ({ searchField: event.target.value.toLowerCase() }));
-            }}
+            onChange={ onSearchChange }
           />
           {
             filteredMonsters.map((person) => {
