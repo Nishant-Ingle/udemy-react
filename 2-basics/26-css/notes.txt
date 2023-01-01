@@ -1,0 +1,7 @@
+1. App.js is not a reusable component hence it is not kept in components/.
+
+2. CSS files can be per component to have child, parent level classes.
+But unlike Angular, once you add a CSS class in any component then it is applicable
+app wide.
+
+3. There are ways to get around this with some CSS in JS libraries.
