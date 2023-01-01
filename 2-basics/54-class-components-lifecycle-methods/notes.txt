@@ -1,0 +1,4 @@
+1. Lifecycles: mounting, updating, unmounting.
+These are explicit in class components while implicit in functional components.
+
+See image more details.
