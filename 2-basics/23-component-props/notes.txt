@@ -1,0 +1,7 @@
+1. Props are properties (html attributes) passed to a component.
+They can be anything and are wrapped inside props object of the component.
+
+2. After passing anything={[1, 'a']} to card-list component if we log this.props,
+it is logged twice (?, next vdo).
+
+3. Pass filteredMonsters to CardList as a prop, extract it and display it.
