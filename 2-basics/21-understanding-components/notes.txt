@@ -1,0 +1,4 @@
+1. Components should be designed to be re-usable.
+2. src/components holds all components.
+3. The folder structure should map to hierarchy of Components
+on the UI.
