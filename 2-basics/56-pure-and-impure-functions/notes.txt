@@ -1,0 +1,4 @@
+1. Pure function give same result with same input and don't use outside variables.
+i.e. stateless.
+
+2. Side-effect: When a function(impure) creates an effect outside its scope.
