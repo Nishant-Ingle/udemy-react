@@ -1,0 +1,4 @@
+1. React runs the functional component everytime when re-rendering.
+Re-rendering happens whenever props or state changes.
+
+2. If previous state is same as current state then no re-rendering happens.
