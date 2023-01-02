@@ -7,12 +7,22 @@ import SearchBox from './components/search-box/search-box.component.jsx';
 
 const AppFunctionalComponent = () => {
   const [searchField, setSearchField] = useState('');
-  console.log(searchField);
+  const [monters, setMonsters] = useState([]);
+  // console.log(searchField);
+  console.log('render');
 
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLowerCase();
     setSearchField(searchFieldString);
   };
+
+  const url = "https://jsonplaceholder.typicode.com/users";
+  fetch(url)
+  .then(resp => {
+    return resp.json();
+  })
+  .then(users => setMonsters(null)); // replace null with users for infinite loop.
+
 
   return (
     <div className="App">

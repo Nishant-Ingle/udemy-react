@@ -1,0 +1,6 @@
+1. If state is coming from a different source or has diff ref in memory
+even with same value, re-rendering will occur.
+
+2. So if we call fetch then infinite re-rendering will occur.
+
+3. To avoid this use useEffect hook to handle side-effects.
