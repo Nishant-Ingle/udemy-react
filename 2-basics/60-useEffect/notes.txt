@@ -1,0 +1,10 @@
+1. useEffect(callback, values): callback is called whenever values is
+initialized or changes.
+
+2. To call a function only once pass the value as [].
+
+3. If any state field changes there we are calculating filteredMonsters again
+which is inefficient.
+
+4. To get around this we introduce another effect which re-calculates
+filteredMonsters and update state only when monsters or searchField changes.

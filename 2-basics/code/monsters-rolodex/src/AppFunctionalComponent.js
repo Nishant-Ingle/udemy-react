@@ -1,5 +1,5 @@
 import './App.css';
-import { Component, useState } from 'react';
+import { Component, useEffect, useState } from 'react';
 import CardList from './components/card-list/card-list.component.jsx';
 import SearchBox from './components/search-box/search-box.component.jsx';
 
@@ -7,7 +7,10 @@ import SearchBox from './components/search-box/search-box.component.jsx';
 
 const AppFunctionalComponent = () => {
   const [searchField, setSearchField] = useState('');
-  const [monters, setMonsters] = useState([]);
+  const [monsters, setMonsters] = useState([]);
+  const [filteredMonsters, setFilteredMonsters] = useState([monsters]);
+  const [stringField, setStringField] = useState([]);
+
   // console.log(searchField);
   console.log('render');
 
@@ -16,24 +19,42 @@ const AppFunctionalComponent = () => {
     setSearchField(searchFieldString);
   };
 
-  const url = "https://jsonplaceholder.typicode.com/users";
-  fetch(url)
-  .then(resp => {
-    return resp.json();
-  })
-  .then(users => setMonsters(null)); // replace null with users for infinite loop.
+  const onStringChange = (event) => {
+    setStringField(event.target.value.toLowerCase());
+  };
 
+  const url = "https://jsonplaceholder.typicode.com/users";
+  useEffect(() => {
+    fetch(url)
+    .then(resp => {
+      return resp.json();
+    })
+    .then(users => setMonsters(users));
+    },
+    []);
+  
+    useEffect(() => {
+      const newFilteredMonsters = monsters.filter((monster) =>
+        monster.name
+               .toLowerCase()
+               .includes(searchField));
+
+      setFilteredMonsters(newFilteredMonsters);
+      console.log('filtered monsters');
+    },
+    [monsters, searchField]);
 
   return (
     <div className="App">
       <h1 className='app-title'>Monsters Rolodex</h1>
-
       <SearchBox
         myClassName='monster-search-box'
         myPlaceholder='search monsters'
         myOnChangeHandler={ onSearchChange } />
-      {/* <CardList filteredMonsters={filteredMonsters} /> */}
-        
+      <SearchBox
+        myPlaceholder='search string'
+        myOnChangeHandler={ onStringChange } />
+      <CardList filteredMonsters={filteredMonsters} />
     </div>
   );
 }
@@ -67,13 +88,7 @@ class AppClassComponent extends Component {
 
 
   render() {
-    const { monsters, searchField } = this.state;
-    const { onSearchChange } = this;
-
-    const filteredMonsters = monsters.filter(
-      (monster) => monster.name
-                          .toLowerCase()
-                          .includes(searchField));
+    
 
     return (
       <div className="App">
