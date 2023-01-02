@@ -1,19 +1,28 @@
 import './App.css';
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import CardList from './components/card-list/card-list.component.jsx';
 import SearchBox from './components/search-box/search-box.component.jsx';
 
 
+
 const AppFunctionalComponent = () => {
+  const [searchField, setSearchField] = useState('');
+  console.log(searchField);
+
+  const onSearchChange = (event) => {
+    const searchFieldString = event.target.value.toLowerCase();
+    setSearchField(searchFieldString);
+  };
+
   return (
     <div className="App">
       <h1 className='app-title'>Monsters Rolodex</h1>
 
-      {/* <SearchBox
+      <SearchBox
         myClassName='monster-search-box'
         myPlaceholder='search monsters'
         myOnChangeHandler={ onSearchChange } />
-      <CardList filteredMonsters={filteredMonsters} /> */}
+      {/* <CardList filteredMonsters={filteredMonsters} /> */}
         
     </div>
   );

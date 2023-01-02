@@ -1,0 +1,3 @@
+1. useState(initialValue) gives [value, valueUpdaterFunction]
+value is the current value and updater function can be used to
+set the value.
