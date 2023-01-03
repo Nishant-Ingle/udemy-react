@@ -1,0 +1,7 @@
+1. Painting refers to (re-)rendering.
+2. Whenever a new component is added to a page entire page reflows
+which is not much expensive though considered as painting.
+e.g. empty h1 suddenly given height thus shifting other components.
+
+3. React dev tools -> rendering -> enable paint flashing highlights components
+that are re-painted.
