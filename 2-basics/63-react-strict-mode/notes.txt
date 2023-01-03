@@ -1,0 +1,3 @@
+1. Strict mode renders twice to catch bugs.
+2. Install chrome extension: react dev tools
+3. Logs from strict mode will be greyed out in console.
