@@ -27,4 +27,15 @@ const App = () => {
 
 };
 
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+// outdated
+// ReactDOM.render(React.createElement(App), document.getElementById("root"));
+
+// R 18 way 1
+// const container = document.getElementById('root');
+// const root = ReactDOM.createRoot(container);
+// root.render(React.createElement(App));
+
+
+// way 2
+ReactDOM.createRoot(document.getElementById("root"))
+        .render(React.createElement(App));
