@@ -1,0 +1,2 @@
+1. createRoot method called over root element.
+Then render.
