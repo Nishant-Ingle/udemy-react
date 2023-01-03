@@ -1,0 +1,11 @@
+1. Write plain react code in index.html.
+2. Add React & ReactDOM scripts.
+3. Create a functional component App.
+  To ReactDOM.render pass React.createElement(App) and document.getElementById("root").
+  This replace #root element with App component.
+
+4. In App component, return React.createElement(<type_of_html_element,
+  <object_key_map_of_attributes_like_props>, child which can be a string or list of createElements).
+
+5. Make sure to use className in attributes.
+
