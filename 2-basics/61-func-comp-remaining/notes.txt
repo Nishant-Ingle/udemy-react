@@ -1,0 +1,7 @@
+1. props can be added as a param to arrow function of a func comp.
+  (props) => {}
+  or destructed
+  ({ monsters }) => {}
+
+2. Multi-level destructing:
+{ monster: { id, name, email, myClassName } }

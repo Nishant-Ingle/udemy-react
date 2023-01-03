@@ -54,7 +54,7 @@ const AppFunctionalComponent = () => {
       <SearchBox
         myPlaceholder='search string'
         myOnChangeHandler={ onStringChange } />
-      <CardList filteredMonsters={filteredMonsters} />
+      <CardList monsters={filteredMonsters} />
     </div>
   );
 }
