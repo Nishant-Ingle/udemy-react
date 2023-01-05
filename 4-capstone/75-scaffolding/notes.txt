@@ -1,0 +1,2 @@
+1. Create react app
+2. Add div containers.
