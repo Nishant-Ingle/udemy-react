@@ -1,0 +1,5 @@
+1. yarn add sass
+2. We can add object with styles too in react as a value of style attribute.
+  Camelcase will be converted to kebab case.
+
+3. Create separate category item component.
