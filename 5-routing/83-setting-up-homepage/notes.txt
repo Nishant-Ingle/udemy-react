@@ -1,0 +1,8 @@
+1. Create a home component.
+Move categories component inside it.
+
+2. Import BrowserRouter component and enclose App
+component inside it.
+
+3. Add Routes, Router from react-router-dom and enclose
+Home as a route. Try changing path.

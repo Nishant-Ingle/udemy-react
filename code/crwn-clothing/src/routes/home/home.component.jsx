@@ -1,5 +1,4 @@
-import './App.css';
-import Categories from './components/categories/categories.component';
+import Categories from "../../components/categories/categories.component";
 
 const categories = [
   {
@@ -29,10 +28,10 @@ const categories = [
   },
 ];
 
-const App = () => {
+const Home = () => {
   return (
       <Categories categories={categories}/>
   );
-}
+};
 
-export default App;
+export default Home;
