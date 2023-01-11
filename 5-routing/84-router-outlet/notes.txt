@@ -1,0 +1,6 @@
+1. Create a shop component at /shop.
+2. Replace self closing Route tag to paired.
+3. Enclose shop's route inside home's route.
+4. Add outlet component in home's template.
+It is also self-closing + paired.
+5. Navigate to /app/shop.
