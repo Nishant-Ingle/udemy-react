@@ -1,0 +1,5 @@
+1. Fragment component is a dummy wrapper that renders to nothing.
+It kind of bypasses the restriction of react to return only 1 component.
+
+2. Link component is similar to anchor tag. Attribute to maps to href
+but is more relevant in the context of routing.
