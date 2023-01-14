@@ -1,0 +1,5 @@
+1. To pass props to distant relative component we need to find the path
+and then keep on passing props which is called prop-drilling.
+
+2. We can avoid this and send props directly to required component using
+contexts.
