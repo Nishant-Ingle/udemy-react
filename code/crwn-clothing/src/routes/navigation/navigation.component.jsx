@@ -5,9 +5,11 @@ import './navigation.styles.scss';
 import { UserContext } from '../../contexts/user.context.jsx';
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
+import { CartContext } from "../../contexts/cart.context";
 
 const Navigation = () => {
   const {hasShopped, setHasShopped} = useContext(UserContext);
+  const {isCartOpen} = useContext(CartContext);
   console.log(setHasShopped(null));
 
   return (
@@ -22,7 +24,7 @@ const Navigation = () => {
           </Link>
           <CartIcon />
         </div>
-        <CartDropdown />
+        { isCartOpen && <CartDropdown />}
       </div>
       <Outlet />
     </Fragment>
