@@ -1,0 +1,2 @@
+1. If useContext is used then that component is re-run
+but not necessarily re-rendered.
