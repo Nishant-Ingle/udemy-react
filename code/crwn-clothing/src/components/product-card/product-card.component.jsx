@@ -1,3 +1,4 @@
+import Button from "../button/button.component";
 import "./product-card.styles.scss";
 
 export const ProductCard = ({product}) => {
@@ -10,7 +11,7 @@ export const ProductCard = ({product}) => {
         <span className="name">{name}</span>
         <span className="price">{price}</span>
       </div>
-      <button> Add to cart</button>
+      <Button> Add to cart</Button>
     </div>
   );
 }
